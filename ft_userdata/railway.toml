@@ -1,0 +1,10 @@
+# Freqtrade on Railway – build and deploy
+# Deploy from ft_userdata/ (set service root to ft_userdata in Railway)
+
+[build]
+builder = "DOCKERFILE"
+
+[deploy]
+restartPolicyType = "ALWAYS"
+healthcheckPath = "/api/v1/ping"
+healthcheckTimeout = 60
