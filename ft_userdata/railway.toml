@@ -7,4 +7,4 @@ builder = "DOCKERFILE"
 [deploy]
 restartPolicyType = "ALWAYS"
 healthcheckPath = "/api/v1/ping"
-healthcheckTimeout = 60
+healthcheckTimeout = 120
