@@ -5,7 +5,8 @@ FROM freqtradeorg/freqtrade:stable
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# Default config (override exchange/key/secret via FREQTRADE__exchange__* env vars)
+# Default config (override via FREQTRADE__* env vars). Keep a copy for fresh volumes.
+COPY user_data/config.json /default_config.json
 COPY user_data/config.json /freqtrade/user_data/config.json
 RUN mkdir -p /freqtrade/user_data/logs /freqtrade/user_data/data
 
