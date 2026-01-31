@@ -13,4 +13,4 @@ COPY user_data/strategies/ /freqtrade/user_data/strategies/
 RUN freqtrade create-userdir --userdir /freqtrade/user_data
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
-CMD ["trade", "--config", "/freqtrade/user_data/config.json", "--logfile", "/freqtrade/user_data/logs/freqtrade.log", "--db-url", "sqlite:////freqtrade/user_data/tradesv3.sqlite", "--strategy", "SampleStrategy"]
+CMD ["trade", "--config", "/freqtrade/user_data/config.json", "--logfile", "/freqtrade/user_data/logs/freqtrade.log", "--db-url", "sqlite:////freqtrade/user_data/tradesv3.sqlite"]
