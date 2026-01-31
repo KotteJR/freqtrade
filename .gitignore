@@ -111,6 +111,8 @@ target/
 #exceptions
 !*.gitkeep
 !ft_userdata/user_data/config.json
+!ft_userdata/user_data/strategies/
+!ft_userdata/user_data/strategies/*.py
 !config_examples/config_binance.example.json
 !config_examples/config_full.example.json
 !config_examples/config_kraken.example.json

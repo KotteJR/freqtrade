@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.freqtrade.io/schema.json",
-    "max_open_trades": 3,
+    "max_open_trades": 6,
     "stake_currency": "USDT",
     "stake_amount": 30,
     "tradable_balance_ratio": 0.99,
@@ -30,15 +30,21 @@
         "order_book_top": 1
     },
     "exchange": {
-        "name": "binance",
+        "name": "gateio",
         "key": "",
         "secret": "",
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
-            "BTC/USDT",
-            "ETH/USDT"
-        ],
+            "BTC/USDT", "ETH/USDT", "BNB/USDT", "SOL/USDT", "XRP/USDT",
+            "ADA/USDT", "DOGE/USDT", "AVAX/USDT", "DOT/USDT", "MATIC/USDT",
+            "LINK/USDT", "ATOM/USDT", "LTC/USDT", "UNI/USDT", "NEAR/USDT",
+            "FIL/USDT", "APT/USDT", "ARB/USDT", "OP/USDT", "INJ/USDT",
+            "AAVE/USDT", "MKR/USDT", "SNX/USDT", "CRV/USDT", "LDO/USDT",
+            "RNDR/USDT", "IMX/USDT", "SUI/USDT", "SEI/USDT", "TIA/USDT",
+            "PEPE/USDT", "WIF/USDT", "BONK/USDT", "FLOKI/USDT", "SHIB/USDT",
+            "FET/USDT", "AGIX/USDT", "OCEAN/USDT", "TAO/USDT", "WLD/USDT"
+            ],
         "pair_blacklist": []
     },
     "pairlists": [

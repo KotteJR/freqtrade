@@ -7,7 +7,9 @@ COPY entrypoint.sh /entrypoint.sh
 # Default config (override via FREQTRADE__* env vars). Keep a copy for fresh volumes.
 COPY user_data/config.json /default_config.json
 COPY user_data/config.json /freqtrade/user_data/config.json
-# Official flow: create-userdir creates strategies/ and copies SampleStrategy (see docs/docker_quickstart.md)
+# Your custom strategies (add .py files in ft_userdata/user_data/strategies/)
+COPY user_data/strategies/ /freqtrade/user_data/strategies/
+# Official flow: create-userdir fills strategies/ with SampleStrategy if missing (docs/docker_quickstart.md)
 RUN freqtrade create-userdir --userdir /freqtrade/user_data
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
