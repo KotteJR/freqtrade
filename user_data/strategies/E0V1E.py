@@ -140,5 +140,6 @@ class E0V1E(IStrategy):
         """
         Exit trend - disabled, using custom_exit instead
         """
-        dataframe.loc[(), ['exit_long', 'exit_tag']] = (0, 'long_out')
+        dataframe['exit_long'] = 0
+        dataframe['exit_tag'] = ''
         return dataframe
